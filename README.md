@@ -25,7 +25,6 @@ docker build -t "java_spring" .
 docker run -td -p 8888:8888 -p 8000:8000 -v $(pwd):/usr/bin/app java_spring bash
 docker exec -it --user root <container>  bash
 
-
 cd core/
 gradle build
 java -jar build/libs/gs-spring-boot-0.1.0.jar --server.port=8000
